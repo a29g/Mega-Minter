@@ -25,11 +25,11 @@ function NFTdropPage() {
                 </div>
                 
                 <div className='space-y-2 p-5 text-center '>
-                    <h1 className='text-4xl font-bold text-black' >
-                        Maha Minters
+                    <h1 className='text-4xl font-bold text-black-500' >
+                        Mega Minters
                     </h1>
                     <h2 className='text-xl text-gray-300' >
-                        Collection of boldest and strongest apes of minters ally
+                        Collection of boldest and strongest apes of minter ally
                     </h2>
                 </div>
             
@@ -43,14 +43,14 @@ function NFTdropPage() {
             <header className='flex items-center justify-between'>
                 <h1 className='w-52 cursor-pointer text-xl font-extralight sm:w-80 '>
                     {' '}
-                    <span className='font-extrabold underline decoration-yellow-600/50 '>
-                        Minters
+                    <span className='font-bold underline decoration-yellow-800/50 '>
+                        HappyApes
                     </span>
                         {' '} 
                         market place
                 </h1>
                 <button onClick={() => (address ? disconnect() : connectWithMM())} 
-                className='rounded-full bg-rose-400 px-4 py-2 text-sm font-bold text-white lg:px-5 lg:py-3 lg:text-base'>
+                className='rounded-full bg-orange-400 px-4 py-2 text-sm font-bold text-white lg:px-5 lg:py-3 lg:text-base'>
                     
                     {address ? 'Sign out' : 'Sign in'}
                 
@@ -63,18 +63,18 @@ function NFTdropPage() {
             )}
 
 
-            {/* conetent */}
+            {/* content */}
             <div className='mt-10 flex flex-1 flex-col items-center sapce-y-6 lg:space-y-1 lg:justify-center'>
-                <img className='w-80 object-cover pb-10 lg:h-40' 
+                <img className='w-80 object-cover pb-10 lg:h-60' 
                 src="https://cdn.sanity.io/images/9ep8u6nk/production/f72570921cab407c11a39c8e1717f5607718e14d-2951x2430.webp" alt="" />
 
-                <h1 className='text-3xl font-semibold lg:text-5xl lg:font-bold'>Dropping the g's for all the homies</h1>
+                <h1 className='text-3xl font-semibold lg:text-4xl lg:font-bold'>Dropping the g's for all the homies</h1>
                 <p className='pt-5 text-xl text-green-600'> 13 out of the well mate</p>
 
             </div>
 
             {/* button */}
-            <button className='h-16 w-full bg-orange-600 rounded-full text-white mt-10 font-bold'>
+            <button className='h-14 w-full bg-orange-600 rounded-full text-white mt-10 font-bold'>
                 Mint NFT (0.01 ETH)
             </button>
 
