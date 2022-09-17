@@ -1,3 +1,9 @@
+# Run in your local machine steps
+
+1. Clone the project in your local
+2. install the project dependencies // yarn install 
+3. run the project and voila // yarn run dev
+
 # Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
