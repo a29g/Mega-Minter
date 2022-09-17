@@ -3,7 +3,7 @@ import { useAddress, useDisconnect, useMetamask } from '@thirdweb-dev/react'
 import { GetServerSideProps } from 'next'
 import { sanityClient, urlFor } from '../../sanity'
 import { Collection } from '../../typing'
-import Link from 'next/Link'
+import Link from 'next/link'
 
 interface Props {
   collection: Collection
