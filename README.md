@@ -1,4 +1,4 @@
-The end result is deployed in Vercel. You can access the webpage of this project through this [link](mega-minter.vercel.app).
+The end result is deployed in Vercel. You can access the webpage of this project through this [link](https://mega-minter.vercel.app/).
 Give it a try with metamask on Rinkby testnet.
 
 # About
