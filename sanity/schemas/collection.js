@@ -5,7 +5,7 @@ export default {
   fields: [
     {
       name: 'title',
-      description: 'Enter the title of NFT drop',
+      description:'Enter the title of the NFT Drop',
       title: 'Title',
       type: 'string',
     },
@@ -16,7 +16,7 @@ export default {
     },
     {
       name: 'nftCollectionName',
-      title: 'Name of the NFT collection',
+      title: 'Name of NFT Collection',
       type: 'string',
     },
     {

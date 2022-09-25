@@ -55,26 +55,27 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const query = `*[_type == "collection"]{
     _id,
     title,
+    address,
     description,
     nftCollectionName,
     mainImage{
-      asset
+    asset
     },
     previewImage{
       asset
-    },
+     },
+  slug{
+    current
+  },
+  creator->{
+    _id,
+    name,
+    address,
     slug{
-      current
-    },
-    creator->{
-      _id,
-      name,
-      address,
-      slug{
-      current
-      },
-    }
-  }`
+    current
+  },
+  },
+    }`
 
   const collections = await sanityClient.fetch(query)
 
