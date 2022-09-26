@@ -111,13 +111,13 @@ function NFTdropPage({ collection }: Props) {
 
   //console.log(address)
   return (
-    <div className="flex h-screen flex-col lg:grid lg:grid-cols-10">
+    <div className=" flex h-screen flex-col lg:grid lg:grid-cols-10">
       <Toaster position="top-center" />
       {/* Left */}
 
-      <div className="bg-300 animate-move bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 lg:col-span-4">
+      <div className="bg-300 animate-move rounded-l bg-gradient-to-br from-purple-500/[.50] via-purple-500 to-black lg:col-span-4">
         <div className="flex flex-col items-center justify-center py-8 lg:min-h-screen lg:py-2">
-          <div className="rounded-xl bg-gradient-to-br from-yellow-400 to-purple-600 p-2">
+          <div className="rounded-xl bg-gradient-to-br from-black to-purple-600 p-2">
             <img
               className="w-44 rounded-xl object-cover lg:h-96 lg:w-72 "
               src={urlFor(collection.previewImage).url()}
@@ -135,7 +135,7 @@ function NFTdropPage({ collection }: Props) {
       </div>
 
       {/* Right */}
-      <div className="bg-white-800 flex flex-1 flex-col p-12 lg:col-span-6">
+      <div className="flex flex-1 flex-col bg-gradient-to-tr from-black via-purple-500 to-purple-500/[.50] p-12 lg:col-span-6">
         {/* Header */}
         <header className="flex items-center justify-between">
           <Link href={'/'}>
@@ -150,7 +150,7 @@ function NFTdropPage({ collection }: Props) {
 
           <button
             onClick={() => (address ? disconnect() : connectWithMM())}
-            className="rounded-full bg-orange-400 px-4 py-2 text-sm font-bold text-white lg:px-5 lg:py-3 lg:text-base"
+            className="rounded-full bg-yellow-500 px-4 py-2 text-sm font-bold text-black lg:px-5 lg:py-3 lg:text-base"
           >
             {address ? 'Sign out' : 'Sign in'}
           </button>
@@ -177,7 +177,7 @@ function NFTdropPage({ collection }: Props) {
           </h1>
 
           {loading ? (
-            <p className="animate-bounce pt-5 text-xl text-green-600">
+            <p className="animate-bounce pt-5 text-xl text-amber-300">
               {' '}
               Loading Supply count....
             </p>
@@ -195,7 +195,7 @@ function NFTdropPage({ collection }: Props) {
           disabled={
             loading || claimedSupply === totalSupply?.toNumber() || !address
           }
-          className="mt-10 h-14 w-full rounded-full bg-orange-600 font-bold text-white disabled:bg-slate-600"
+          className="mt-10 h-14 w-full rounded-full bg-yellow-500 font-bold text-black disabled:bg-amber-300"
         >
           {loading ? (
             <>Loading</>
