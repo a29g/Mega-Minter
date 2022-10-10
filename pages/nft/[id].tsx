@@ -115,9 +115,9 @@ function NFTdropPage({ collection }: Props) {
       <Toaster position="top-center" />
       {/* Left */}
 
-      <div className="bg-300 animate-move rounded-l bg-gradient-to-br from-purple-500/[.50] via-purple-500 to-black lg:col-span-4">
+      <div className="bg-300 animate-move rounded-l bg-black lg:col-span-4">
         <div className="flex flex-col items-center justify-center py-8 lg:min-h-screen lg:py-2">
-          <div className="rounded-xl bg-gradient-to-br from-black to-purple-600 p-2">
+          <div className="rounded-xl bg-gradient-to-br from-white to-purple-600 p-2">
             <img
               className="w-44 rounded-xl object-cover lg:h-96 lg:w-72 "
               src={urlFor(collection.previewImage).url()}
@@ -126,23 +126,25 @@ function NFTdropPage({ collection }: Props) {
           </div>
 
           <div className="space-y-2 p-5 text-center ">
-            <h1 className="text-black-500 text-4xl font-bold">
+            <h1 className="text-4xl font-bold text-yellow-500">
               {collection.nftCollectionName}
             </h1>
-            <h2 className="text-xl text-gray-300">{collection.description}</h2>
+            <h2 className="font-mono text-xl text-white">
+              {collection.description}
+            </h2>
           </div>
         </div>
       </div>
 
       {/* Right */}
-      <div className="flex flex-1 flex-col bg-gradient-to-tr from-black via-purple-500 to-purple-500/[.50] p-12 lg:col-span-6">
+      <div className="flex flex-1 flex-col bg-black p-12 lg:col-span-6">
         {/* Header */}
         <header className="flex items-center justify-between">
           <Link href={'/'}>
-            <h1 className="w-52 cursor-pointer text-xl font-extralight sm:w-80 ">
+            <h1 className="w-52 cursor-pointer font-serif text-2xl font-extralight text-white sm:w-80 ">
               {' '}
-              <span className="font-bold underline decoration-yellow-800/50 ">
-                DankApes
+              <span className="font-bold text-yellow-500 underline decoration-orange-500 ">
+                TopShot
               </span>{' '}
               market place
             </h1>
@@ -158,7 +160,7 @@ function NFTdropPage({ collection }: Props) {
 
         <hr className="my-2 border-2" />
         {address && (
-          <p className="pt-3 text-center text-sm text-rose-800">
+          <p className="pt-3 text-center text-sm text-orange-500">
             You're logged in with wallet {address.substring(0, 5)}...
             {address.substring(address.length - 5)}{' '}
           </p>
@@ -177,12 +179,12 @@ function NFTdropPage({ collection }: Props) {
           </h1>
 
           {loading ? (
-            <p className="animate-bounce pt-5 text-xl text-amber-300">
+            <p className="animate-bounce pt-5 text-xl text-yellow-500">
               {' '}
               Loading Supply count....
             </p>
           ) : (
-            <p className="pt-5 text-xl text-green-600">
+            <p className="pt-5 text-xl text-yellow-500">
               {' '}
               {claimedSupply} / {totalSupply?.toString()} NFT out of well mate
             </p>
@@ -195,7 +197,7 @@ function NFTdropPage({ collection }: Props) {
           disabled={
             loading || claimedSupply === totalSupply?.toNumber() || !address
           }
-          className="mt-10 h-14 w-full rounded-full bg-yellow-500 font-bold text-black disabled:bg-amber-300"
+          className="mt-10 h-14 w-full rounded-full bg-yellow-500 font-bold text-black disabled:bg-yellow-500"
         >
           {loading ? (
             <>Loading</>

@@ -20,8 +20,8 @@ const Home = ({ collections }: Props) => {
 
         <h1 className="mb-10  font-mono  text-4xl text-slate-50">
           {' '}
-          <span className="font-bold underline decoration-yellow-800/50 ">
-            DankApes
+          <span className="font-bold text-yellow-500 underline decoration-orange-500 ">
+            NFT TopShot
           </span>{' '}
           market place
         </h1>
@@ -31,15 +31,15 @@ const Home = ({ collections }: Props) => {
               <Link href={`/nft/${collection.slug.current}`}>
                 <div className="flex flex-col items-center transition-all duration-200 hover:scale-110">
                   <img
-                    className="h-96 w-60 rounded-2xl object-cover"
-                    src={urlFor(collection.mainImage).url()}
+                    className="h-96 w-60 cursor-pointer rounded-2xl object-cover"
+                    src={urlFor(collection.previewImage).url()}
                     alt=""
                   ></img>
-                  <div className="p-5">
-                    <h2 className="font-serif text-3xl text-white">
+                  <div className="cursor-pointer p-5">
+                    <h2 className="font-mono text-3xl text-yellow-500">
                       {collection.title}
                     </h2>
-                    <p className="mt-2 font-mono text-sm text-teal-600">
+                    <p className="mt-2 font-mono text-sm text-white">
                       {collection.description}
                     </p>
                   </div>
